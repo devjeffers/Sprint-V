@@ -1,0 +1,43 @@
+Projeto Banco de Dados turma 23:( Sprint_V)
+
+Nomes: Alessandra Cristine Cesar Barbosa
+            Laura Dayanne Rodrigues Gomes
+            Jefferson Christopher Jiménez Ribeiro
+            Marcos Xavier
+
+
+         Tabela SQL do Diagrama Professor:
+
+
+
+    
+ -- Tabela Professor
+CREATE TABLE Professor (
+    id_professor INT PRIMARY KEY,
+    formacao VARCHAR(255)
+);
+
+-- Tabela Disciplina
+CREATE TABLE Disciplina (
+    id_disciplina INT PRIMARY KEY,
+    nome_da_disciplina VARCHAR(255),
+    carga_horaria INT,
+    id_professor INT,
+    FOREIGN KEY (id_professor) REFERENCES Professor(id_professor)
+);
+
+-- Tabela Estudante
+CREATE TABLE Estudante (
+    id_estudante INT PRIMARY KEY,
+    nome VARCHAR(255),
+    registro VARCHAR(255)
+);
+
+-- Tabela de junção para a relação muitos-para-muitos entre Disciplina e Estudante
+CREATE TABLE Estudante_Disciplina (
+    id_estudante INT,
+    id_disciplina INT,
+    PRIMARY KEY (id_estudante, id_disciplina),
+    FOREIGN KEY (id_estudante) REFERENCES Estudante(id_estudante),
+    FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
+);

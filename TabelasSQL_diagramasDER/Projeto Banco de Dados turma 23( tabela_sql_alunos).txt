@@ -1,0 +1,45 @@
+Projeto Banco de Dados turma 23:( Sprint_V)
+
+Nomes: Alessandra Cristine Cesar Barbosa
+            Laura Dayanne Rodrigues Gomes
+            Jefferson Christopher Jiménez Ribeiro
+            Marcos Xavier
+
+
+         Tabela SQL do Diagrama Alunos:
+
+
+  
+-- Tabela Aluno
+CREATE TABLE Aluno (
+    aluno_id INT PRIMARY KEY,
+    nome VARCHAR(255),
+    data_nasc DATE,
+    cpf VARCHAR(11)
+);
+
+-- Tabela Inscrição
+CREATE TABLE Inscrição (
+    inscrição_id INT PRIMARY KEY,
+    data DATE,
+    aluno_id INT,
+    curso_id INT,
+    FOREIGN KEY (aluno_id) REFERENCES Aluno(aluno_id),
+    FOREIGN KEY (curso_id) REFERENCES Curso(curso_id)
+);
+
+-- Tabela Curso
+CREATE TABLE Curso (
+    curso_id INT PRIMARY KEY,
+    nome VARCHAR(255),
+    descricao TEXT
+);
+
+-- Tabela Módulo
+CREATE TABLE Módulo (
+    modulo_id INT PRIMARY KEY,
+    nome VARCHAR(255),
+    descricao TEXT,
+    curso_id INT,
+    FOREIGN KEY (curso_id) REFERENCES Curso(curso_id)
+);

@@ -1,0 +1,24 @@
+Projeto Banco de Dados turma 23:( Sprint_V)
+
+Nomes: Alessandra Cristine Cesar Barbosa
+            Laura Dayanne Rodrigues Gomes
+            Jefferson Christopher Jiménez Ribeiro
+            Marcos Xavier
+
+
+         Tabela SQL do Diagrama Veículo:
+
+-- Tabela Pessoa
+CREATE TABLE Pessoa (
+    id_pessoa INT PRIMARY KEY,
+    nome VARCHAR(255),
+    endereco VARCHAR(255)
+);
+
+-- Tabela Veiculo
+CREATE TABLE Veiculo (
+    id_veiculo INT PRIMARY KEY,
+    modelo VARCHAR(255),
+    id_pessoa INT,
+    FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa)
+);
