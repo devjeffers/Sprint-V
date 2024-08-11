@@ -11,3 +11,7 @@
 ## Acesse o link Abaixo para conferir a criação das Tabelas e ensaios:
 
 ☁ 🔗 https://drive.google.com/file/d/1FMo_0WR0ujYdBun4ZpJJxjj87RoiE3x3/view?usp=sharing
+
+### Nesse link vcs podem ter acesso a outros diagramas e tabelas!
+
+☁ 🔗 https://drive.google.com/drive/folders/1b1mgEiylwbHQZTO-RL0n4YRLfoujbI3-?usp=sharing
